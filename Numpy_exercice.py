@@ -3,7 +3,7 @@ import numpy as np
 # Ouvrir le fichier CSV avec open() et le passer à genfromtxt
 with open('Loan_prediction_dataset.csv', 'r', encoding='utf-8') as f:
     data = np.genfromtxt(f, delimiter=',', skip_header=1, dtype=str)
-
+f.close()
 # Extraire la colonne LoanAmount (index 8) et convertir en float si possible
 loan_amounts = []
 for row in data:
